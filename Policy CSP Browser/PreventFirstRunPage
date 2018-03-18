@@ -1,0 +1,37 @@
+<!---
+Browser Policy CSP
+https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-browser
+
+	User scope:
+		./User/Vendor/MSFT/Policy/Config/AreaName/PolicyName to configure the policy.
+		./User/Vendor/MSFT/Policy/Result/AreaName/PolicyName to get the result.
+	Device scope:
+		./Device/Vendor/MSFT/Policy/Config/AreaName/PolicyName to configure the policy.
+		./Device/Vendor/MSFT/Policy/Result/AreaName/PolicyName to get the result.
+-->
+<!---
+Browser/PreventFirstRunPage
+Added in Windows 10, version 1703. 
+Specifies whether to enable or disable the First Run webpage. 
+On the first explicit user-launch of Microsoft Edge, a First Run webpage hosted on Microsoft.com opens automatically via a FWLINK. 
+This policy allows enterprises (such as those enrolled in a zero-emissions configuration) to prevent this page from opening.
+Most restricted value is 1.
+The following list shows the supported values:
+0 (default) – Employees see the First Run webpage. 
+1 – Employees don't see the First Run webpage.
+-->	
+<Atomic>
+	<CmdID>_cmdid_</CmdID>
+		<Replace>
+			<CmdID>_cmdid_</CmdID>
+				<Item>
+					<Target>
+						<LocURI>./User/Vendor/MSFT/Policy/Config/Browser/PreventFirstRunPage</LocURI>
+					</Target>
+						<Meta>
+							<Format xmlns="syncml:metinf">int</Format>
+						</Meta>
+							<Data>1</Data>		
+				</Item>
+		</Replace>
+</Atomic>	
