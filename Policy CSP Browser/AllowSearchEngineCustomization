@@ -1,0 +1,40 @@
+<!---
+Browser Policy CSP
+https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-browser
+
+	User scope:
+		./User/Vendor/MSFT/Policy/Config/AreaName/PolicyName to configure the policy.
+		./User/Vendor/MSFT/Policy/Result/AreaName/PolicyName to get the result.
+	Device scope:
+		./Device/Vendor/MSFT/Policy/Config/AreaName/PolicyName to configure the policy.
+		./Device/Vendor/MSFT/Policy/Result/AreaName/PolicyName to get the result.
+-->
+
+<!---
+Browser/AllowSearchEngineCustomization
+Added in Windows 10, version 1703. Allows search engine customization for MDM-enrolled devices. 
+Users can change their default search engine.
+If this setting is turned on or not configured, users can add new search engines and change the default used in the address bar from within Microsoft Edge settings. 
+If this setting is disabled, users will be unable to add search engines or change the default used in the address bar. 
+This policy applies only on domain-joined machines or when the device is MDM-enrolled. 
+For more information, see Microsoft browser extension policy (aka.ms/browserpolicy). 
+Most restricted value is 0.
+The following list shows the supported values:
+0 – Not allowed.
+1 (default) – Allowed.
+-->
+<Atomic>
+	<CmdID>_cmdid_</CmdID>
+		<Replace>
+			<CmdID>_cmdid_</CmdID>
+				<Item>
+					<Target>
+						<LocURI>./User/Vendor/MSFT/Policy/Config/Browser/AllowSearchEngineCustomization</LocURI>
+					</Target>
+						<Meta>
+							<Format xmlns="syncml:metinf">int</Format>
+						</Meta>
+							<Data>0</Data>		
+				</Item>
+		</Replace>
+</Atomic>	
