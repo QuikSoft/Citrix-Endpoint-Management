@@ -1,0 +1,33 @@
+<!---
+Personalization Policy CSP
+https://docs.microsoft.com/en-us/windows/client-management/mdm/personalization-csp
+
+The Personalization CSP can set the lock screen and desktop background images. Setting these policies also prevents the user from changing the image. 
+You can also use the Personalization settings in a provisioning package.
+This CSP was added in Windows 10, version 1703.
+-->
+
+<!--
+Lock Screen Image
+Specify a jpg, jpeg or png image to be used as Lock Screen Image. 
+This setting can take a http or https Url to a remote image to be downloaded, a file Url to a local image.
+Value type is string. Supported operations are Add, Get, Delete, and Replace
+-->
+
+<Atomic>
+	<CmdID>_cmdid_</CmdID>
+	<Replace>
+	  <CmdID>_cmdid_</CmdID>
+		
+		<Item>
+			<Target>
+				<LocURI>./Vendor/MSFT/Personalization/LockScreenImageUrl</LocURI>
+			</Target>
+			    <Meta>
+					<Format xmlns="syncml:metinf">chr</Format>
+						<Type>text/plain</Type>
+				</Meta>
+					<Data>http://10.0.0.31/personalisation/lockscreenimage.jpeg</Data>
+		</Item>
+	</Replace>	
+</Atomic>
