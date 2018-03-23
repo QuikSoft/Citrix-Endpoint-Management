@@ -1,0 +1,35 @@
+<!---
+AllowManualMDMUnenrollment Policy CSP
+https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-experience#experience-allowmanualmdmunenrollment
+
+	Device scope:
+		./Device/Vendor/MSFT/Policy/Config/AreaName/PolicyName to configure the policy.
+-->
+
+<!---
+Experience/AllowManualMDMUnenrollment
+Specifies whether to allow the user to delete the workplace account using the workplace control panel. 
+If the device is Azure Active Directory joined and MDM enrolled (e.g. auto-enrolled), then disabling the MDM unenrollment has no effect.
+Note:
+The MDM server can always remotely delete the account.
+Most restricted value is 0.
+The following list shows the supported values:
+0 – Not allowed.
+1 (default) – Allowed.
+-->	
+
+<Atomic>
+	<CmdID>_cmdid_</CmdID>
+	<Add>
+		<CmdID>_cmdid_</CmdID>
+			<Item>
+				<Target>
+					<LocURI>./Vendor/MSFT/Policy/Config/Experience/AllowManualMDMUnenrollment</LocURI>
+				</Target>
+					<Meta>
+						<Format xmlns="syncml:metinf">int</Format>
+					</Meta>
+						<Data>0</Data>		
+			</Item>
+	</Add>
+</Atomic>
