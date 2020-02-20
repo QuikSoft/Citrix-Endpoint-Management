@@ -1,0 +1,54 @@
+<!---
+Policy CSP - LocalPoliciesSecurityOptions Accounts_RenameGuestAccount
+dpwin10_01_corp_Accountmngt_Rename_Guest_Account
+https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-accounts-renameguestaccount
+
+Datatype Integer
+	<Format xmlns="syncml:metinf">int</Format>
+	<Data>number</Data>
+
+Data Type String 
+	<Format xmlns="syncml:metinf">chr</Format>
+	<Type>text/plain</Type>	
+	<Data>https://fqdn</Data>	
+-->
+<!---
+	User scope:
+		./User/Vendor/MSFT/Policy/Config/AreaName/PolicyName to configure the policy.
+		./User/Vendor/MSFT/Policy/Result/AreaName/PolicyName to get the result.
+	Device scope:
+		./Device/Vendor/MSFT/Policy/Config/AreaName/PolicyName to configure the policy.
+		./Device/Vendor/MSFT/Policy/Result/AreaName/PolicyName to get the result.
+	For device wide configuration the Device/ portion may be omitted from the path, deeming the following paths respectively equivalent:
+		./Vendor/MSFT/Policy/Config/AreaName/PolicyName to configure the policy.
+		./Vendor/MSFT/Policy/Result/AreaName/PolicyName to get the result.
+-->
+<Atomic>
+	<CmdID>_cmdid_</CmdID>
+
+<!---
+Device Scope
+
+Accounts: Rename guest account
+
+This security setting determines whether a different account name is associated with the security identifier (SID) for the account "Guest." 
+Renaming the well-known Guest account makes it slightly more difficult for unauthorized persons to guess this user name and password combination.
+
+Default: Guest.
+
+Value type is string. Supported operations are Add, Get, Replace, and Delete.
+-->	
+	<Add>
+		<CmdID>_cmdid_</CmdID>
+			<Item>
+				<Target>
+					<LocURI>./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/Accounts_RenameGuestAccount</LocURI>
+				</Target>
+					<Meta>
+						<Format xmlns="syncml:metinf">chr</Format>
+						<Type>text/plain</Type>	
+					</Meta>
+						<Data>_ghost</Data>		
+			</Item>
+	</Add>
+</Atomic>
