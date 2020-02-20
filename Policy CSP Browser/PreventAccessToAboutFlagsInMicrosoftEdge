@@ -1,0 +1,38 @@
+<!---
+Policy CSP - PreventAccessToAboutFlagsInMicrosoftEdge
+https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-browser#browser-preventaccesstoaboutflagsinmicrosoftedge
+
+Specifies whether users can access the about:flags page, which is used to change developer settings and to enable experimental features.
+
+The following list shows the supported values:
+0 (default) – Users can access the about:flags page in Microsoft Edge.
+1 – Users can't access the about:flags page in Microsoft Edge.
+
+Datatype = Integer
+	<Format xmlns="syncml:metinf">int</Format>
+	<Data>number</Data>
+-->
+<!---
+	User scope:
+		./User/Vendor/MSFT/Policy/Config/AreaName/PolicyName to configure the policy.
+		./User/Vendor/MSFT/Policy/Result/AreaName/PolicyName to get the result.
+	Device scope:
+		./Device/Vendor/MSFT/Policy/Config/AreaName/PolicyName to configure the policy.
+		./Device/Vendor/MSFT/Policy/Result/AreaName/PolicyName to get the result.
+-->
+
+<Atomic>
+    <CmdID>_cmdid_</CmdID>
+        <Add>
+            <CmdID>_cmdid_</CmdID>
+                <Item>
+                    <Target>
+                        <LocURI>./User/Vendor/MSFT/Policy/Config/Browser/PreventAccessToAboutFlagsInMicrosoftEdge</LocURI>
+                    </Target>
+                        <Meta>
+							<Format xmlns="syncml:metinf">int</Format>
+                        </Meta>
+                            <Data>1</Data>                           
+                </Item>
+        </Add>         
+</Atomic>
