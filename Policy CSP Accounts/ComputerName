@@ -1,0 +1,51 @@
+<!---
+Policy CSP - Accounts
+https://docs.microsoft.com/en-us/windows/client-management/mdm/accounts-csp
+
+Data Type String 
+	<Format xmlns="syncml:metinf">chr</Format>
+	<Type>text/plain</Type>	
+	<Data>https://fqdn</Data>	
+
+Datatype Integer
+	<Format xmlns="syncml:metinf">int</Format>
+	<Data>number</Data>
+-->
+<!---
+	User scope:
+		./User/Vendor/MSFT/Policy/Config/AreaName/PolicyName to configure the policy.
+		./User/Vendor/MSFT/Policy/Result/AreaName/PolicyName to get the result.
+	Device scope:
+		./Device/Vendor/MSFT/Policy/Config/AreaName/PolicyName to configure the policy.
+		./Device/Vendor/MSFT/Policy/Result/AreaName/PolicyName to get the result.
+-->
+
+<!---
+Scope: Device
+	Domain
+		Interior node for the account domain information.
+	Domain/ComputerName
+		This node specifies the name for a device. This setting can be managed remotely. 
+		A couple of macros can be embedded within the value for dynamic substitution: %RAND:<# of digits>% and %SERIAL%. 
+		Examples: (a) "Test%RAND:6%" will generate a name "Test" followed by 6 random digits (e.g., "Test123456"). (b) "Foo%SERIAL%", will generate a name "Foo" followed by the serial number derived from device's ID. 
+		The server must explicitly reboot the device for this value to take effect.
+		Supported operation is Add.
+-->
+
+<Atomic>
+	<CmdID>_cmdid_</CmdID>
+
+	<Add>
+		<CmdID>_cmdid_</CmdID>
+			<Item>
+				<Target>
+					<LocURI>./Device/Vendor/MSFT/Accounts/Domain/ComputerName</LocURI>
+				</Target>
+					<Meta>
+						<Format xmlns="syncml:metinf">chr</Format>
+						<Type>text/plain</Type>	
+					</Meta>
+						<Data>QSLABW10%RAND:2%</Data>		
+			</Item>
+	</Add>
+</Atomic>
