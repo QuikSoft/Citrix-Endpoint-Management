@@ -1,0 +1,92 @@
+<!---
+Policy CSP - WindowsAdvancedThreatProtection CSP
+
+https://docs.microsoft.com/en-us/windows/client-management/mdm/windowsadvancedthreatprotection-csp
+
+The Windows Defender Advanced Threat Protection (WDATP) configuration service provider (CSP) allows IT Admins to onboard, 
+determine configuration and health status, and offboard endpoints for WDATP.
+-->
+<!---
+Scope:
+	User
+	Device
+
+	User scope:
+		./User/Vendor/MSFT/Policy/Config/AreaName/PolicyName to configure the policy.
+		./User/Vendor/MSFT/Policy/Result/AreaName/PolicyName to get the result.
+	Device scope:
+		./Device/Vendor/MSFT/Policy/Config/AreaName/PolicyName to configure the policy.
+		./Device/Vendor/MSFT/Policy/Result/AreaName/PolicyName to get the result.
+-->
+<Atomic>
+	<CmdID>_cmdid_</CmdID>
+		<Replace>
+			<CmdID>_cmdid_</CmdID>
+				  <Item>
+					<Target>
+						<LocURI>./Device/Vendor/MSFT/WindowsAdvancedThreatProtection/Onboarding</LocURI>
+					  </Target>
+					<Meta>
+					  <Format xmlns="syncml:metinf">chr</Format>
+					  <Type>text/plain</Type>
+					</Meta>
+					<Data>[Insert ATP Onboarding BLOB HERE]</Data>
+				  </Item>
+		</Replace>
+		
+		<Replace>
+			<CmdID>_cmdid_</CmdID>
+				  <Item>
+					<Target>
+						<LocURI>./Device/Vendor/MSFT/WindowsAdvancedThreatProtection/Configuration/SampleSharing</LocURI>
+					  </Target>
+					<Meta>
+					  <Format xmlns="syncml:metinf">int</Format>
+					  <Type>text/plain</Type>
+					</Meta>
+					<Data>1</Data>
+				  </Item>
+		</Replace>
+
+		<Replace>
+			<CmdID>_cmdid_</CmdID>
+				  <Item>
+					<Target>
+						<LocURI>./Device/Vendor/MSFT/WindowsAdvancedThreatProtection/Configuration/TelemetryReportingFrequency</LocURI>
+					  </Target>
+					<Meta>
+					  <Format xmlns="syncml:metinf">int</Format>
+					  <Type>text/plain</Type>
+					</Meta>
+					<Data>1</Data>
+				  </Item>
+		</Replace>
+
+		<Replace>
+			<CmdID>_cmdid_</CmdID>
+				  <Item>
+					<Target>
+						<LocURI>./Device/Vendor/MSFT/WindowsAdvancedThreatProtection/DeviceTagging/Criticality</LocURI>
+					  </Target>
+					<Meta>
+					  <Format xmlns="syncml:metinf">int</Format>
+					  <Type>text/plain</Type>
+					</Meta>
+					<Data>0</Data>
+				  </Item>
+		</Replace>
+
+		<Replace>
+			<CmdID>_cmdid_</CmdID>
+				  <Item>
+					<Target>
+						<LocURI>./Device/Vendor/MSFT/WindowsAdvancedThreatProtection/DeviceTagging/IdMethod</LocURI>
+					  </Target>
+					<Meta>
+					  <Format xmlns="syncml:metinf">int</Format>
+					  <Type>text/plain</Type>
+					</Meta>
+					<Data>1</Data>
+				  </Item>
+		</Replace>
+</Atomic>
