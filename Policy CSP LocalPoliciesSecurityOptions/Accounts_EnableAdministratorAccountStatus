@@ -55,7 +55,7 @@ Valid values:
 						<Format xmlns="syncml:metinf">chr</Format>
 						<Type>text/plain</Type>	
 					</Meta>
-						<Data>_root</Data>		
+						<Data>1</Data>		
 			</Item>
 	</Add>
 </Atomic>
