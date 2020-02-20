@@ -1,0 +1,52 @@
+<!---
+Policy CSP - Browser ClearBrowsingDataOnExit 
+ 
+dpwin10_04_corp_Browsermngt_ClearBrowsingDataOnExit 
+
+https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-browser#browser-clearbrowsingdataonexit
+
+Added in Windows 10, version 1703. 
+Specifies whether to clear browsing data on exiting Microsoft Edge.
+Most restricted value is 1.
+
+The following list shows the supported values:
+	0 – (default) Browsing data is not cleared on exit. The type of browsing data to clear can be configured by the employee in the Clear browsing data options under Settings.
+	1 – Browsing data is cleared on exit.
+	
+To verify that browsing data is cleared on exit (ClearBrowsingDataOnExit is set to 1): 
+	Open Microsoft Edge and browse to websites.
+	Close the Microsoft Edge window.
+	Open Microsoft Edge and start typing the same URL in address bar. Verify that it does not auto-complete from history.
+
+Scope:
+	User
+	Device
+	
+Datatype = Integer
+	<Format xmlns="syncml:metinf">int</Format>
+	<Data>number</Data>
+-->
+<!---
+	User scope:
+		./User/Vendor/MSFT/Policy/Config/AreaName/PolicyName to configure the policy.
+		./User/Vendor/MSFT/Policy/Result/AreaName/PolicyName to get the result.
+	Device scope:
+		./Device/Vendor/MSFT/Policy/Config/AreaName/PolicyName to configure the policy.
+		./Device/Vendor/MSFT/Policy/Result/AreaName/PolicyName to get the result.
+-->
+
+<Atomic>
+    <CmdID>_cmdid_</CmdID>
+        <Add>
+            <CmdID>_cmdid_</CmdID>
+                <Item>
+                    <Target>
+                        <LocURI>./User/Vendor/MSFT/Policy/Config/Browser/ClearBrowsingDataOnExit</LocURI>
+                    </Target>
+                        <Meta>
+							<Format xmlns="syncml:metinf">int</Format>
+                        </Meta>
+                            <Data>1</Data>                           
+                </Item>
+        </Add>         
+</Atomic>
