@@ -1,0 +1,58 @@
+<!---
+Policy CSP - SetDefaultSearchEngine  
+
+https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-browser#browser-allowsearchenginecustomization
+
+Added in Windows 10, version 1703. Allows you configure the default search engine for your employees. 
+By default, your employees can change the default search engine at any time. 
+If you want to prevent your employees from changing the default search engine that you set, you can do so by configuring the AllowSearchEngineCustomization policy.
+You must specify a link to the OpenSearch XML file that contains, at a minimum, the short name and the URL template (HTTPS) of the search engine. 
+For more information about creating the OpenSearch XML file, see Search provider discovery. https://docs.microsoft.com/en-us/microsoft-edge/dev-guide/browser/search-provider-discovery
+If you want your employees to use the Microsoft Edge factory settings for the default search engine for their market, set the string EDGEDEFAULT; 
+otherwise, if you want your employees to use Bing as the default search engine, set the string EDGEBING. 
+If this setting is not configured, the default search engine is set to the one specified in App settings and can be changed by your employees. If this setting is disabled, the policy-set search engine will be removed, and, if it is the current default, the default will be set back to the factory Microsoft Edge search engine for the market. 
+
+Important
+This setting can be used only with domain-joined or MDM-enrolled devices. For more information, see the Microsoft browser extension policy (aka.ms/browserpolicy).
+
+Most restricted value is 0.
+
+The following list shows the supported values:
+	0 (default) - The default search engine is set to the one specified in App settings.
+	1 - Allows you to configure the default search engine for your employees.
+
+Datatype = Integer
+	<Format xmlns="syncml:metinf">int</Format>
+	<Data>number</Data>
+-->
+<!---
+Scope:
+	User
+	Device
+
+	User scope:
+		./User/Vendor/MSFT/Policy/Config/AreaName/PolicyName to configure the policy.
+		./User/Vendor/MSFT/Policy/Result/AreaName/PolicyName to get the result.
+	Device scope:
+		./Device/Vendor/MSFT/Policy/Config/AreaName/PolicyName to configure the policy.
+		./Device/Vendor/MSFT/Policy/Result/AreaName/PolicyName to get the result.
+-->
+<!---
+Google Search OpenSearch URL: https://www.google.com/searchdomaincheck?format=opensearch
+-->
+
+<Atomic>
+	<CmdID>_cmdid_</CmdID>
+		<Replace>
+			<CmdID>_cmdid_</CmdID>
+				<Item>
+					<Target>
+						<LocURI>./User/Vendor/MSFT/Policy/Config/Browser/SetDefaultSearchEngine</LocURI>
+					</Target>
+						<Meta>
+							<Format xmlns="syncml:metinf">chr</Format>
+						</Meta>
+							<Data>&lt;https://www.google.com/searchdomaincheck?format=opensearch&gt;</Data>		
+				</Item>
+		</Replace>
+</Atomic>
