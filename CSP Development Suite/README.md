@@ -82,4 +82,5 @@ https://docs.microsoft.com/en-us/windows/client-management/mdm/configuration-ser
 
 CSP DDF Files: 
 https://docs.microsoft.com/en-us/windows/client-management/mdm/configuration-service-provider-reference?redirectedfrom=MSDN#csp-ddf-files-download 
-Or download them from this GitHub Repository
+
+Or download them from the CSP Development Suite directory.
