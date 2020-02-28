@@ -1,0 +1,288 @@
+<!---
+Policy CSP - DeliveryOptimization
+https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dodownloadmode
+
+-->
+<Atomic>
+	<CmdID>_cmdid_</CmdID>
+	
+	<Replace>
+	  <CmdID>_cmdid_</CmdID>
+	  <Item>
+		<Target>
+			<LocURI>./Device/Vendor/MSFT/Policy/Config/DeliveryOptimization/DOAbsoluteMaxCacheSize</LocURI>
+		  </Target>
+		<Meta>
+		  <Format xmlns="syncml:metinf">int</Format>
+		  <Type>text/plain</Type>
+		</Meta>
+		<Data>10</Data>
+	  </Item>
+	</Replace>
+
+	<Replace>
+	  <CmdID>_cmdid_</CmdID>
+	  <Item>
+		<Target>
+			<LocURI>./Device/Vendor/MSFT/Policy/Config/DeliveryOptimization/DOAllowVPNPeerCaching</LocURI>
+		  </Target>
+		<Meta>
+		  <Format xmlns="syncml:metinf">int</Format>
+		  <Type>text/plain</Type>
+		</Meta>
+		<Data>0</Data>
+	  </Item>
+	</Replace>
+
+	<Replace>
+	  <CmdID>_cmdid_</CmdID>
+	  <Item>
+		<Target>
+			<LocURI>./Device/Vendor/MSFT/Policy/Config/DeliveryOptimization/DODelayBackgroundDownloadFromHttp</LocURI>
+		  </Target>
+		<Meta>
+		  <Format xmlns="syncml:metinf">int</Format>
+		  <Type>text/plain</Type>
+		</Meta>
+		<Data>3600</Data>
+	  </Item>
+	</Replace>
+
+	<Replace>
+	  <CmdID>_cmdid_</CmdID>
+	  <Item>
+		<Target>
+			<LocURI>./Device/Vendor/MSFT/Policy/Config/DeliveryOptimization/DODelayForegroundDownloadFromHttp</LocURI>
+		  </Target>
+		<Meta>
+		  <Format xmlns="syncml:metinf">int</Format>
+		  <Type>text/plain</Type>
+		</Meta>
+		<Data>60</Data>
+	  </Item>
+	</Replace>
+
+	<Replace>
+	  <CmdID>_cmdid_</CmdID>
+	  <Item>
+		<Target>
+			<LocURI>./Device/Vendor/MSFT/Policy/Config/DeliveryOptimization/DODownloadMode</LocURI>
+		  </Target>
+		<Meta>
+		  <Format xmlns="syncml:metinf">int</Format>
+		  <Type>text/plain</Type>
+		</Meta>
+		<Data>1</Data>
+	  </Item>
+	</Replace>
+
+	<Replace>
+	  <CmdID>_cmdid_</CmdID>
+	  <Item>
+		<Target>
+			<LocURI>./Device/Vendor/MSFT/Policy/Config/DeliveryOptimization/DOGroupId</LocURI>
+		  </Target>
+		<Meta>
+		  <Format xmlns="syncml:metinf">chr</Format>
+		  <Type>text/plain</Type>
+		</Meta>
+		<Data>5a1cb998-e835-439e-9688-f25c56240d86</Data>
+	  </Item>
+	</Replace>
+
+	<Replace>
+	  <CmdID>_cmdid_</CmdID>
+	  <Item>
+		<Target>
+			<LocURI>./Device/Vendor/MSFT/Policy/Config/DeliveryOptimization/DOMaxCacheAge</LocURI>
+		  </Target>
+		<Meta>
+		  <Format xmlns="syncml:metinf">int</Format>
+		  <Type>text/plain</Type>
+		</Meta>
+		<Data>259200</Data>
+	  </Item>
+	</Replace>
+
+	<Replace>
+	  <CmdID>_cmdid_</CmdID>
+	  <Item>
+		<Target>
+			<LocURI>./Device/Vendor/MSFT/Policy/Config/DeliveryOptimization/DOMaxCacheSize</LocURI>
+		  </Target>
+		<Meta>
+		  <Format xmlns="syncml:metinf">int</Format>
+		  <Type>text/plain</Type>
+		</Meta>
+		<Data>20</Data>
+	  </Item>
+	</Replace>
+
+	<Replace>
+	  <CmdID>_cmdid_</CmdID>
+	  <Item>
+		<Target>
+			<LocURI>./Device/Vendor/MSFT/Policy/Config/DeliveryOptimization/DOMaxDownloadBandwidth</LocURI>
+		  </Target>
+		<Meta>
+		  <Format xmlns="syncml:metinf">int</Format>
+		  <Type>text/plain</Type>
+		</Meta>
+		<Data>0</Data>
+	  </Item>
+	</Replace>
+
+	<Replace>
+	  <CmdID>_cmdid_</CmdID>
+	  <Item>
+		<Target>
+			<LocURI>./Device/Vendor/MSFT/Policy/Config/DeliveryOptimization/DOMaxUploadBandwidth</LocURI>
+		  </Target>
+		<Meta>
+		  <Format xmlns="syncml:metinf">int</Format>
+		  <Type>text/plain</Type>
+		</Meta>
+		<Data>0</Data>
+	  </Item>
+	</Replace>
+
+	<Replace>
+	  <CmdID>_cmdid_</CmdID>
+	  <Item>
+		<Target>
+			<LocURI>./Device/Vendor/MSFT/Policy/Config/DeliveryOptimization/DOMinBackgroundQos</LocURI>
+		  </Target>
+		<Meta>
+		  <Format xmlns="syncml:metinf">int</Format>
+		  <Type>text/plain</Type>
+		</Meta>
+		<Data>500</Data>
+	  </Item>
+	</Replace>
+
+	<Replace>
+	  <CmdID>_cmdid_</CmdID>
+	  <Item>
+		<Target>
+			<LocURI>./Device/Vendor/MSFT/Policy/Config/DeliveryOptimization/DOMinBatteryPercentageAllowedToUpload</LocURI>
+		  </Target>
+		<Meta>
+		  <Format xmlns="syncml:metinf">int</Format>
+		  <Type>text/plain</Type>
+		</Meta>
+		<Data>40</Data>
+	  </Item>
+	</Replace>
+
+	<Replace>
+	  <CmdID>_cmdid_</CmdID>
+	  <Item>
+		<Target>
+			<LocURI>./Device/Vendor/MSFT/Policy/Config/DeliveryOptimization/DOMinDiskSizeAllowedToPeer</LocURI>
+		  </Target>
+		<Meta>
+		  <Format xmlns="syncml:metinf">int</Format>
+		  <Type>text/plain</Type>
+		</Meta>
+		<Data>16</Data>
+	  </Item>
+	</Replace>
+
+	<Replace>
+	  <CmdID>_cmdid_</CmdID>
+	  <Item>
+		<Target>
+			<LocURI>./Device/Vendor/MSFT/Policy/Config/DeliveryOptimization/DOMinFileSizeToCache</LocURI>
+		  </Target>
+		<Meta>
+		  <Format xmlns="syncml:metinf">int</Format>
+		  <Type>text/plain</Type>
+		</Meta>
+		<Data>20</Data>
+	  </Item>
+	</Replace>
+
+	<Replace>
+	  <CmdID>_cmdid_</CmdID>
+	  <Item>
+		<Target>
+			<LocURI>./Device/Vendor/MSFT/Policy/Config/DeliveryOptimization/DOMinRAMAllowedToPeer</LocURI>
+		  </Target>
+		<Meta>
+		  <Format xmlns="syncml:metinf">int</Format>
+		  <Type>text/plain</Type>
+		</Meta>
+		<Data>1</Data>
+	  </Item>
+	</Replace>
+
+	<Replace>
+	  <CmdID>_cmdid_</CmdID>
+	  <Item>
+		<Target>
+			<LocURI>./Device/Vendor/MSFT/Policy/Config/DeliveryOptimization/DOModifyCacheDrive</LocURI>
+		  </Target>
+		<Meta>
+		  <Format xmlns="syncml:metinf">chr</Format>
+		  <Type>text/plain</Type>
+		</Meta>
+		<Data>%SystemDrive%</Data>
+	  </Item>
+	</Replace>
+
+	<Replace>
+	  <CmdID>_cmdid_</CmdID>
+	  <Item>
+		<Target>
+			<LocURI>./Device/Vendor/MSFT/Policy/Config/DeliveryOptimization/DOMonthlyUploadDataCap</LocURI>
+		  </Target>
+		<Meta>
+		  <Format xmlns="syncml:metinf">int</Format>
+		  <Type>text/plain</Type>
+		</Meta>
+		<Data>20</Data>
+	  </Item>
+	</Replace>
+
+	<Replace>
+	  <CmdID>_cmdid_</CmdID>
+	  <Item>
+		<Target>
+			<LocURI>./Device/Vendor/MSFT/Policy/Config/DeliveryOptimization/DOPercentageMaxBackgroundBandwidth</LocURI>
+		  </Target>
+		<Meta>
+		  <Format xmlns="syncml:metinf">int</Format>
+		  <Type>text/plain</Type>
+		</Meta>
+		<Data>0</Data>
+	  </Item>
+	</Replace>
+
+	<Replace>
+	  <CmdID>_cmdid_</CmdID>
+	  <Item>
+		<Target>
+			<LocURI>./Device/Vendor/MSFT/Policy/Config/DeliveryOptimization/DOPercentageMaxForegroundBandwidth</LocURI>
+		  </Target>
+		<Meta>
+		  <Format xmlns="syncml:metinf">int</Format>
+		  <Type>text/plain</Type>
+		</Meta>
+		<Data>0</Data>
+	  </Item>
+	</Replace>
+
+	<Replace>
+	  <CmdID>_cmdid_</CmdID>
+	  <Item>
+		<Target>
+			<LocURI>./Device/Vendor/MSFT/Policy/Config/DeliveryOptimization/DORestrictPeerSelectionBy</LocURI>
+		  </Target>
+		<Meta>
+		  <Format xmlns="syncml:metinf">int</Format>
+		  <Type>text/plain</Type>
+		</Meta>
+		<Data>1</Data>
+	  </Item>
+	</Replace>
+</Atomic>
