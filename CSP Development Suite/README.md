@@ -8,7 +8,7 @@ The CSP Development Suite is a tool created by Microsoft to help with creating c
 - Obtain more info on how to enter values into each node by gathering more info on the CSP at https://aka.ms/CSPList
 - Copy and paste the SyncML only including the **Exec, Add, or Replace** tags into **Notepad++**
 - Add **<Atomic>** to the top and **</Atomic>** to the end of the custom XML file.
-- Replace all **<CmdID>1</CmdID>** or that contain a followup number with **<CmdID>_cmdid_</CmdID>** as Citrix Endpoint Management will automaticly generated the numbering.
+- Replace all ```CmdID>1</CmdID>``` or that contain a followup number with ```<CmdID>_cmdid_</CmdID>``` as Citrix Endpoint Management will automaticly generated the numbering.
 
 **Example code generate by SyncML Generator**
 ```
