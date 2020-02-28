@@ -32,7 +32,7 @@ The CSP Development Suite is a tool created by Microsoft to help with creating c
   </SyncBody>
 </SyncML>
 ```
-**Final XML Code ready to be used with Citrix Endpoint Management**
+**Final XML code ready to be used with Citrix Endpoint Management**
 ```
 <Atomic>
   <CmdID>_cmdid_</CmdID>
@@ -55,6 +55,7 @@ The CSP Development Suite is a tool created by Microsoft to help with creating c
 - To deploy this sample, navigate to **Configure > Device Policies > Add > Filer on Windows Desktop/Tablet > Custom > Custom XML > Clear All > Select Windows Desktop/Tablet > Provide Policy Name** , then copy and paste the edited SyncML into the box and publish the CSP.
 
 **Resources**
+
 CSP Documentation: 
 https://docs.microsoft.com/en-us/windows/client-management/mdm/configuration-service-provider-reference?redirectedfrom=MSDN
 
