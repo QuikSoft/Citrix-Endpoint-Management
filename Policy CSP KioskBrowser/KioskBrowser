@@ -1,0 +1,113 @@
+<!---
+Policy CSP - KioskBrowser
+https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-kioskbrowser
+
+	Device scope:
+		./Device/Vendor/MSFT/Policy/Config/AreaName/PolicyName to configure the policy.
+		./Device/Vendor/MSFT/Policy/Result/AreaName/PolicyName to get the result.
+-->
+
+<!---
+TXT
+-->	
+
+<Atomic>
+	 <CmdID>_cmdid_</CmdID>
+		<Replace>
+		  <CmdID>_cmdid_</CmdID>
+			  <Item>
+				<Target>
+					<LocURI>./Device/Vendor/MSFT/Policy/Config/KioskBrowser/BlockedUrlExceptions</LocURI>
+				</Target>
+					<Meta>
+					  <Format xmlns="syncml:metinf">chr</Format>
+						<Type>text/plain</Type>
+					</Meta>
+						<Data>citrix.com</Data>
+			  </Item>
+		</Replace>
+		
+		<Replace>
+			<CmdID>_cmdid_</CmdID>
+				<Item>
+					<Target>
+						<LocURI>./Device/Vendor/MSFT/Policy/Config/KioskBrowser/BlockedUrls</LocURI>
+					</Target>
+						<Meta>
+							<Format xmlns="syncml:metinf">chr</Format>
+								<Type>text/plain</Type>
+						</Meta>
+							<Data>*</Data>
+				</Item>
+		</Replace>
+		
+	<Replace>
+		<CmdID>_cmdid_</CmdID>
+			<Item>
+				<Target>
+					<LocURI>./Device/Vendor/MSFT/Policy/Config/KioskBrowser/DefaultURL</LocURI>
+				</Target>
+					<Meta>
+						<Format xmlns="syncml:metinf">chr</Format>
+							<Type>text/plain</Type>
+					</Meta>
+						<Data>https://www.citrix.com/products/citrix-endpoint-management/</Data>
+			</Item>
+	</Replace>
+
+	<Replace>
+		<CmdID>_cmdid_</CmdID>
+			<Item>
+				<Target>
+					<LocURI>./Device/Vendor/MSFT/Policy/Config/KioskBrowser/EnableEndSessionButton</LocURI>
+				</Target>
+					<Meta>
+						<Format xmlns="syncml:metinf">int</Format>
+							<Type>text/plain</Type>
+					</Meta>
+						<Data>1</Data>
+			</Item>
+	</Replace>
+
+	<Replace>
+		<CmdID>_cmdid_</CmdID>
+			<Item>
+				<Target>
+					<LocURI>./Device/Vendor/MSFT/Policy/Config/KioskBrowser/EnableHomeButton</LocURI>
+				</Target>
+					<Meta>
+						<Format xmlns="syncml:metinf">int</Format>
+							<Type>text/plain</Type>
+					</Meta>
+						<Data>1</Data>
+			</Item>
+	</Replace>
+
+	<Replace>
+		<CmdID>_cmdid_</CmdID>
+			<Item>
+				<Target>
+					<LocURI>./Device/Vendor/MSFT/Policy/Config/KioskBrowser/EnableNavigationButtons</LocURI>
+				</Target>
+					<Meta>
+						<Format xmlns="syncml:metinf">int</Format>
+							<Type>text/plain</Type>
+					</Meta>
+			<Data>1</Data>
+			</Item>
+	</Replace>
+
+	<Replace>
+		<CmdID>_cmdid_</CmdID>
+			<Item>
+				<Target>
+					<LocURI>./Device/Vendor/MSFT/Policy/Config/KioskBrowser/RestartOnIdleTime</LocURI>
+				</Target>
+				<Meta>
+					<Format xmlns="syncml:metinf">int</Format>
+						<Type>text/plain</Type>
+				</Meta>
+					<Data>1</Data>
+			</Item>
+	</Replace>
+</Atomic>
