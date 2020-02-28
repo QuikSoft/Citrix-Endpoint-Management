@@ -25,7 +25,7 @@ The CSP Development Suite is a tool created by Microsoft to help with creating c
           <Format xmlns="syncml:metinf">chr</Format>
           <Type>text/plain</Type>
         </Meta>
-        <Data>http://members.ziggo.nl/jjvlebon/Wallpaper/desktopimage.jpeg</Data>
+        <Data>http://example.com/jjvlebon/Wallpaper/desktopimage.jpeg</Data>
       </Item>
     </Replace>
     <Final/> 
@@ -35,26 +35,20 @@ The CSP Development Suite is a tool created by Microsoft to help with creating c
 **Final XML Code ready to be used with Citrix Endpoint Management**
 ```
 <Atomic>
-	<CmdID>_cmdid_</CmdID>
-	<Replace>
-		<CmdID>_cmdid_</CmdID>
-		<!--
-		Desktop Image
-		Specify a jpg, jpeg or png image to be used as Desktop Image. 
-		This setting can take a http or https Url to a remote image to be downloaded, a file Url to a local image.
-		Value type is string. Supported operations are Add, Get, Delete, and Replace
-		-->
-		<Item>
-			<Target>
-				<LocURI>./Vendor/MSFT/Personalization/DesktopImageUrl</LocURI>
-			</Target>
-			    <Meta>
-					<Format xmlns="syncml:metinf">chr</Format>
-						<Type>text/plain</Type>
-				</Meta>
-					<Data>http://members.ziggo.nl/jjvlebon/Wallpaper/desktopimage.jpeg</Data>
-		</Item>
-	</Replace>
+  <CmdID>_cmdid_</CmdID>
+    <Replace>
+      <CmdID>_cmdid_</CmdID>
+        <Item>
+          <Target>
+             <LocURI>./Vendor/MSFT/Personalization/DesktopImageUrl</LocURI>
+          </Target>
+            <Meta>
+               <Format xmlns="syncml:metinf">chr</Format>
+               <Type>text/plain</Type>
+           </Meta>
+               <Data>http://example.com/jjvlebon/Wallpaper/desktopimage.jpeg</Data>
+        </Item>
+    </Replace>
 </Atomic>
 ```
 - Optionally export your SyncML for later reference.
