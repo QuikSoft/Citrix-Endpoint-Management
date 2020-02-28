@@ -10,6 +10,7 @@ The CSP Development Suite is a tool created by Microsoft to help with creating c
 - Replace all **<CmdID>1</CmdID>** or that contain a followup number with **<CmdID>_cmdid_</CmdID>** as Citrix Endpoint Management will automaticly generated the numbering.
 
 **Example code generate by SyncML Generator**
+```
 <SyncML xmlns="SYNCML:SYNCML1.2">
   <SyncBody>
     <Replace>
@@ -30,8 +31,9 @@ The CSP Development Suite is a tool created by Microsoft to help with creating c
     <Final/> 
   </SyncBody>
 </SyncML>
-
+```
 **Final XML Code ready to be used with Citrix Endpoint Management**
+```
 <Atomic>
 	<CmdID>_cmdid_</CmdID>
 	<Replace>
@@ -54,9 +56,9 @@ The CSP Development Suite is a tool created by Microsoft to help with creating c
 		</Item>
 	</Replace>
 </Atomic>
-
-Optionally export your SyncML for later reference.
-To deploy this sample, navigate to **Configure > Device Policies > Add > Filer on Windows Desktop/Tablet > Custom > Custom XML > Clear All > Select Windows Desktop/Tablet > Provide Policy Name** , then copy and paste the edited SyncML into the box and publish the CSP.
+```
+- Optionally export your SyncML for later reference.
+- To deploy this sample, navigate to **Configure > Device Policies > Add > Filer on Windows Desktop/Tablet > Custom > Custom XML > Clear All > Select Windows Desktop/Tablet > Provide Policy Name** , then copy and paste the edited SyncML into the box and publish the CSP.
 
 **Resources**
 CSP Documentation: https://docs.microsoft.com/en-us/windows/client-management/mdm/configuration-service-provider-reference?redirectedfrom=MSDN
