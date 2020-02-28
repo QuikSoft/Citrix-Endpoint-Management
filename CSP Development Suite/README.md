@@ -55,6 +55,8 @@ The CSP Development Suite is a tool created by Microsoft to help with creating c
 - To deploy this sample, navigate to **Configure > Device Policies > Add > Filer on Windows Desktop/Tablet > Custom > Custom XML > Clear All > Select Windows Desktop/Tablet > Provide Policy Name** , then copy and paste the edited SyncML into the box and publish the CSP.
 
 **Resources**
-CSP Documentation: https://docs.microsoft.com/en-us/windows/client-management/mdm/configuration-service-provider-reference?redirectedfrom=MSDN
+CSP Documentation: 
+https://docs.microsoft.com/en-us/windows/client-management/mdm/configuration-service-provider-reference?redirectedfrom=MSDN
 
-CSP DDF Files: https://docs.microsoft.com/en-us/windows/client-management/mdm/configuration-service-provider-reference?redirectedfrom=MSDN#csp-ddf-files-download
+CSP DDF Files: 
+https://docs.microsoft.com/en-us/windows/client-management/mdm/configuration-service-provider-reference?redirectedfrom=MSDN#csp-ddf-files-download
