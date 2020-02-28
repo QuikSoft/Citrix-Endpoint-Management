@@ -7,7 +7,7 @@ The CSP Development Suite is a tool created by Microsoft to help with creating c
 - Click **Open, File, Import DDF** to import your DDF for the CSP
 - Obtain more info on how to enter values into each node by gathering more info on the CSP at https://aka.ms/CSPList
 - Copy and paste the SyncML only including the **Exec, Add, or Replace** tags into **Notepad++**
-- Add **<Atomic>** to the top and **</Atomic>** to the end of the custom XML file.
+- Add ```<Atomic>``` to the top and ```</Atomic>``` to the end of the custom XML file.
 - Replace all ```CmdID>1</CmdID>``` or that contain a followup number with ```<CmdID>_cmdid_</CmdID>``` as Citrix Endpoint Management will automaticly generated the numbering.
 
 **Example code generate by SyncML Generator**
@@ -61,4 +61,5 @@ CSP Documentation:
 https://docs.microsoft.com/en-us/windows/client-management/mdm/configuration-service-provider-reference?redirectedfrom=MSDN
 
 CSP DDF Files: 
-https://docs.microsoft.com/en-us/windows/client-management/mdm/configuration-service-provider-reference?redirectedfrom=MSDN#csp-ddf-files-download
+https://docs.microsoft.com/en-us/windows/client-management/mdm/configuration-service-provider-reference?redirectedfrom=MSDN#csp-ddf-files-download 
+Or download them from this GitHub Repository
