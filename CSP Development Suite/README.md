@@ -7,6 +7,26 @@ The CSP Development Suite is a tool created by Microsoft to help with creating c
 - Click **Open, File, Import DDF** to import your DDF for the CSP
 - Obtain more info on how to enter values into each node by gathering more info on the CSP at https://aka.ms/CSPList
 - Copy and paste the SyncML only including the ```<CmdID>1</CmdID>``` **Exec, Add, or Replace** tags into **Notepad++**
+
+**Example copied code from SyncML Generator into Notepad++**
+```
+    <Replace>
+      <CmdID>1</CmdID>
+      <Item>
+        <Target>
+          <LocURI>
+            ./Vendor/MSFT/Personalization/DesktopImageUrl
+          </LocURI>
+        </Target>
+        <Meta>
+          <Format xmlns="syncml:metinf">chr</Format>
+          <Type>text/plain</Type>
+        </Meta>
+        <Data>http://example.com/jjvlebon/Wallpaper/desktopimage.jpeg</Data>
+      </Item>
+    </Replace>
+```
+
 - Add ```<Atomic>``` to the top and ```</Atomic>``` to the end of the custom XML file.
 - Replace all ```CmdID>1</CmdID>``` or that contain a followup number with ```<CmdID>_cmdid_</CmdID>``` as Citrix Endpoint Management will automaticly generated the numbering.
 
