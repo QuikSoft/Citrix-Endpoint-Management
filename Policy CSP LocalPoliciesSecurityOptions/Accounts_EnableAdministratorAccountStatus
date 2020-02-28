@@ -1,0 +1,61 @@
+<!---
+Policy CSP - LocalPoliciesSecurityOptions Accounts_EnableAdministratorAccountStatus
+https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-accounts-enableadministratoraccountstatus
+
+Datatype Integer
+	<Format xmlns="syncml:metinf">int</Format>
+	<Data>number</Data>
+
+Data Type String 
+	<Format xmlns="syncml:metinf">chr</Format>
+	<Type>text/plain</Type>	
+	<Data>https://fqdn</Data>	
+-->
+<!---
+	User scope:
+		./User/Vendor/MSFT/Policy/Config/AreaName/PolicyName to configure the policy.
+		./User/Vendor/MSFT/Policy/Result/AreaName/PolicyName to get the result.
+	Device scope:
+		./Device/Vendor/MSFT/Policy/Config/AreaName/PolicyName to configure the policy.
+		./Device/Vendor/MSFT/Policy/Result/AreaName/PolicyName to get the result.
+	For device wide configuration the Device/ portion may be omitted from the path, deeming the following paths respectively equivalent:
+		./Vendor/MSFT/Policy/Config/AreaName/PolicyName to configure the policy.
+		./Vendor/MSFT/Policy/Result/AreaName/PolicyName to get the result.
+-->
+<Atomic>
+	<CmdID>_cmdid_</CmdID>
+
+<!---
+Device Scope
+
+This security setting determines whether the local Administrator account is enabled or disabled.
+If you try to reenable the Administrator account after it has been disabled, and if the current Administrator password does not meet the password requirements, you cannot reenable the account. 
+In this case, an alternative member of the Administrators group must reset the password on the Administrator account. 
+For information about how to reset a password, see To reset a password. 
+Disabling the Administrator account can become a maintenance issue under certain circumstances.
+Under Safe Mode boot, the disabled Administrator account will only be enabled if the machine is non-domain joined and there are no other local active administrator accounts. 
+If the computer is domain joined the disabled administrator will not be enabled.
+
+Default: Disabled.
+
+Value type is integer. Supported operations are Add, Get, Replace, and Delete.
+
+Valid values:
+
+0 - local Administrator account is disabled
+1 - local Administrator account is enabled
+-->	
+	<Add>
+		<CmdID>_cmdid_</CmdID>
+			<Item>
+				<Target>
+					<LocURI>./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/Accounts_EnableAdministratorAccountStatus</LocURI>
+				</Target>
+					<Meta>
+						<Format xmlns="syncml:metinf">chr</Format>
+						<Type>text/plain</Type>	
+					</Meta>
+						<Data>1</Data>		
+			</Item>
+	</Add>
+</Atomic>

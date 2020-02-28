@@ -1,0 +1,99 @@
+<!---
+Policy CSP - Accounts
+https://docs.microsoft.com/en-us/windows/client-management/mdm/accounts-csp
+
+Data Type String 
+	<Format xmlns="syncml:metinf">chr</Format>
+	<Type>text/plain</Type>	
+	<Data>https://fqdn</Data>	
+
+Datatype Integer
+	<Format xmlns="syncml:metinf">int</Format>
+	<Data>number</Data>
+-->
+<!---
+	User scope:
+		./User/Vendor/MSFT/Policy/Config/AreaName/PolicyName to configure the policy.
+		./User/Vendor/MSFT/Policy/Result/AreaName/PolicyName to get the result.
+	Device scope:
+		./Device/Vendor/MSFT/Policy/Config/AreaName/PolicyName to configure the policy.
+		./Device/Vendor/MSFT/Policy/Result/AreaName/PolicyName to get the result.
+-->
+<Atomic>
+	<CmdID>_cmdid_</CmdID>
+
+	<Add>
+		<CmdID>_cmdid_</CmdID>
+			<Item>
+				<Target>
+					<LocURI>./Device/Vendor/MSFT/Accounts/Users/UserName</LocURI>
+				</Target>
+					<Meta>
+						<Format xmlns="syncml:metinf">chr</Format>
+						<Type>text/plain</Type>	
+					</Meta>
+						<Data>srv_helpdesk</Data>		
+			</Item>
+	</Add>
+<!---
+
+
+
+1. Users/UserName/Password
+
+Device Scope
+
+Datatype String
+
+Users 
+	Interior node for the user account information.
+Users/UserName 
+	This node specifies the username for a new local user account. This setting can be managed remotely.
+Users/UserName/Password
+	This node specifies the password for a new local user account. This setting can be managed remotely. 
+Supported operation is Add.
+
+Replace UserName with the local user you want to create.
+./Device/Vendor/MSFT/Accounts/Users/UserName/Password
+-->	
+	<Add>
+		<CmdID>_cmdid_</CmdID>
+			<Item>
+				<Target>
+					<LocURI>./Device/Vendor/MSFT/Accounts/Users/srv_helpdesk/Password</LocURI>
+				</Target>
+					<Meta>
+						<Format xmlns="syncml:metinf">chr</Format>
+						<Type>text/plain</Type>	
+					</Meta>
+						<Data>[Insert Password Here]</Data>		
+			</Item>
+	</Add>
+
+	<!---
+2. Users/UserName/LocalUserGroup
+
+Device Scope
+
+Datatype Integer
+
+This optional node specifies the local user group that a local user account should be joined to. 
+If the node is not set, the new local user account is joined just to the Standard Users group. Set the value to 2 for Administrators group. 
+This setting can be managed remotely.
+Supported operation is Add.
+
+-->	
+	<Add>
+		<CmdID>_cmdid_</CmdID>
+			<Item>
+				<Target>
+					<LocURI>./Device/Vendor/MSFT/Accounts/Users/srv_helpdesk/LocalUserGroup</LocURI>
+				</Target>
+					<Meta>
+						<Format xmlns="syncml:metinf">int</Format>
+					</Meta>
+						<Data>2</Data>		
+			</Item>
+	</Add>
+
+</Atomic>

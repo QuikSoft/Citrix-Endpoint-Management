@@ -1,0 +1,57 @@
+<!---
+Policy CSP - ControlPolicyConflict
+https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-controlpolicyconflict
+dpwin10_01_corp_OSmngt_ControlPolicyConflict
+
+Added in Windows 10, version 1803. This policy allows the IT admin to control which policy will be used whenever both the MDM policy and its equivalent Group Policy (GP) are set on the device.
+MDMWinsOverGP only applies to policies in Policy CSP. It does not apply to other MDM settings with equivalent GP settings that are defined on other configuration service providers.
+This policy is used to ensure that MDM policy wins over GP when same setting is set by both GP and MDM channel. This policy doesn’t support Delete command. This policy doesn’t support settinthe value to be 0 again after it was previously set 1. The default value is 0. The MDM policies in Policy CSP will behave as described if this policy value is set 1.
+The following list shows the supported values:
+
+0 (default)
+1 - The MDM policy is used and the GP policy is blocked.
+
+Data Type String 
+	<Format xmlns="syncml:metinf">chr</Format>
+	<Type>text/plain</Type>	
+	<Data>admx</Data>
+
+The data type is a chr.
+
+The supported operation is Replace.
+-->
+<!---
+Scope:
+
+	Device
+
+	Device scope:
+		./Device/Vendor/MSFT/RemoteDesktopServices/PolicyName to configure the policy.
+		./Device/Vendor/MSFT/RemoteDesktopServices/PolicyName to get the result.
+-->
+
+<Atomic>
+	<CmdID>_cmdid_</CmdID>
+<!---
+RemoteDesktopServices/AllowUsersToConnectRemotely
+This policy setting allows you to configure remote access to computers by using Remote Desktop Services.
+If you enable this policy setting, users who are members of the Remote Desktop Users group on the target computer can connect remotely to the target computer by using Remote Desktop Services.
+If you disable this policy setting, users cannot connect remotely to the target computer by using Remote Desktop Services. 
+The target computer will maintain any current connections, but will not accept any new incoming connections.
+If you do not configure this policy setting, Remote Desktop Services uses the Remote Desktop setting on the target computer to determine whether the remote connection is allowed. 
+This setting is found on the Remote tab in the System properties sheet. By default, remote connections are not allowed.
+-->	
+		<Replace>
+			<CmdID>_cmdid_</CmdID>
+			  <Item>
+				<Target>
+					<LocURI>./Device/Vendor/MSFT/Policy/Config/ControlPolicyConflict/MDMWinsOverGP</LocURI>
+				</Target>
+					<Meta>
+					  <Format xmlns="syncml:metinf">chr</Format>
+					  <Type>text/plain</Type>
+					</Meta>
+						<Data><![CDATA[<enabled/><data id=”TS_ENCRYPTION_LEVEL” value=”1″/>]]></Data>
+			  </Item>
+				</Replace>
+</Atomic>

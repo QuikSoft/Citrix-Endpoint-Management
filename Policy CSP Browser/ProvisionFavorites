@@ -1,0 +1,47 @@
+<!---
+Policy CSP - Browser ProvisionFavorites
+https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-browser#browser-provisionfavorites
+
+Data type is string.
+		<Format xmlns="syncml:metinf">chr</Format>
+		<Type>text/plain</Type>
+
+Added in Windows 10, version 1709. This policy setting allows you to configure a default set of favorites, which will appear for employees. Employees cannot modify, sort, move, export or delete these provisioned favorites. Specify the URL which points to the file that has all the data for provisioning favorites (in html format). You can export a set of favorites from Edge and use that html file for provisioning user machines. 
+	URL can be specified as:
+		HTTP location: "SiteList"="http://localhost:8080/URLs.html"
+		Local network: "SiteList"="\network\shares\URLs.html"
+		Local file: "SiteList"="file:///c:\Users\\Documents\URLs.html"
+		"SiteList"="http://10.0.0.31/personalisation/urls.html"
+
+Important
+	Don't enable both this setting and the Keep favorites in sync between Internet Explorer and Microsoft Edge setting. 
+	Enabling both settings stops employees from syncing their favorites between Internet Explorer and Microsoft Edge.
+-->
+<!---
+	User scope:
+		./User/Vendor/MSFT/Policy/Config/AreaName/PolicyName to configure the policy.
+		./User/Vendor/MSFT/Policy/Result/AreaName/PolicyName to get the result.
+	Device scope:
+		./Device/Vendor/MSFT/Policy/Config/AreaName/PolicyName to configure the policy.
+		./Device/Vendor/MSFT/Policy/Result/AreaName/PolicyName to get the result.
+-->
+
+
+<Atomic>
+    <CmdID>_cmdid_</CmdID>
+        <Replace>
+            <CmdID>_cmdid_</CmdID>
+                <Item>
+                    <Target>
+                        <LocURI>./User/Vendor/MSFT/Policy/Config/Browser/ProvisionFavorites</LocURI>
+                    </Target>
+                        <Meta>
+							<Format xmlns="syncml:metinf">chr</Format>
+								<Type>text/plain</Type>
+                        </Meta>
+                            <Data>[Insert URL Here]</Data>                           
+                </Item>
+        </Replace>         
+</Atomic>
+
+

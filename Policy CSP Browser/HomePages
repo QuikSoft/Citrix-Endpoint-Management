@@ -1,0 +1,34 @@
+<!---
+Browser Policy CSP
+https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-browser
+
+	User scope:
+		./User/Vendor/MSFT/Policy/Config/AreaName/PolicyName to configure the policy.
+		./User/Vendor/MSFT/Policy/Result/AreaName/PolicyName to get the result.
+	Device scope:
+		./Device/Vendor/MSFT/Policy/Config/AreaName/PolicyName to configure the policy.
+		./Device/Vendor/MSFT/Policy/Result/AreaName/PolicyName to get the result.
+-->
+
+<!---
+Browser/HomePages
+Specifies your Start pages for MDM-enrolled devices. Turning this setting on lets you configure one or more corporate Start pages.
+If this setting is turned on, you must also include URLs to the pages, 
+separating multiple pages by using the XML-escaped characters < and >. 
+For example, "<support.contoso.com><support.microsoft.com>"
+-->
+<Atomic>
+	<CmdID>_cmdid_</CmdID>	
+		<Replace>
+			<CmdID>_cmdid_</CmdID>
+				<Item>
+					<Target>
+						<LocURI>./User/Vendor/MSFT/Policy/Config/Browser/HomePages</LocURI>
+					</Target>
+						<Meta>
+							<Format xmlns="syncml:metinf">chr</Format>
+						</Meta>
+							<Data>&lt;https://www.google.com&gt;</Data>		
+				</Item>
+		</Replace>
+</Atomic>

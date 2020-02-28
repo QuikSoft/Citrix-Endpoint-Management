@@ -1,0 +1,51 @@
+<!---
+Policy CSP - Browser AllowDoNotTrack 
+dpwin10_04_corp_Browsermngt_AllowDoNotTrack
+
+https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-browser#browser-allowdonottrack
+
+Specifies whether Do Not Track headers are allowed.
+Most restricted value is 1.
+
+The following list shows the supported values:
+	0 (default) – Not allowed.
+	1 – Allowed.
+	
+	To verify AllowDoNotTrack is set to 0 (not allowed):
+	Open Microsoft Edge or Microsoft Edge for Windows 10 Mobile.
+	In the upper-right corner of the browser, click ….
+	Click Settings in the drop down list, and select View Advanced Settings.
+	Verify the setting Send Do Not Track requests is greyed out.
+
+Scope:
+	User
+	Device
+	
+Datatype = Integer
+	<Format xmlns="syncml:metinf">int</Format>
+	<Data>number</Data>
+-->
+<!---
+	User scope:
+		./User/Vendor/MSFT/Policy/Config/AreaName/PolicyName to configure the policy.
+		./User/Vendor/MSFT/Policy/Result/AreaName/PolicyName to get the result.
+	Device scope:
+		./Device/Vendor/MSFT/Policy/Config/AreaName/PolicyName to configure the policy.
+		./Device/Vendor/MSFT/Policy/Result/AreaName/PolicyName to get the result.
+-->
+
+<Atomic>
+    <CmdID>_cmdid_</CmdID>
+        <Add>
+            <CmdID>_cmdid_</CmdID>
+                <Item>
+                    <Target>
+                        <LocURI>./User/Vendor/MSFT/Policy/Config/Browser/AllowDoNotTrack</LocURI>
+                    </Target>
+                        <Meta>
+							<Format xmlns="syncml:metinf">int</Format>
+                        </Meta>
+                            <Data>0</Data>                           
+                </Item>
+        </Add>         
+</Atomic>
